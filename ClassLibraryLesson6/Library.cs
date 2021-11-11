@@ -9,7 +9,7 @@ namespace ClassLibraryLesson6
     public class Library
     {
 
-        private Book[] ArrayWithBooks = new Book[10];
+        public Book[] ArrayWithBooks { get; private set; }
 
 
         public Library(Book[] arrayWithBooks)
@@ -28,6 +28,7 @@ namespace ClassLibraryLesson6
 
         public void FoundABook(string bookName)
         {
+           
             for (int i = 0; i < ArrayWithBooks.Length; i++)
             {
                 if (ArrayWithBooks[i].GetName().Equals(bookName))
@@ -38,27 +39,8 @@ namespace ClassLibraryLesson6
                 else if (i == (ArrayWithBooks.Length - 1))
                 {
                     Console.WriteLine("Такой книги нет!");
-                }
-            }
-        }
-
-        public void BiggestBook()
-        {
-            int biggestCount = ArrayWithBooks[0].GetCountOfPages();
-            for (int i = 0; i < ArrayWithBooks.Length; i++)
-            {
-
-                if (ArrayWithBooks[i].GetCountOfPages() > biggestCount)
-                {
-                    biggestCount = ArrayWithBooks[i].GetCountOfPages();
-
-                }
-                else if (i == ArrayWithBooks.Length - 1)
-                {
-                    Console.WriteLine($"Самая большая книга это {ArrayWithBooks[i].GetName()}");
                     break;
                 }
-
             }
         }
     }

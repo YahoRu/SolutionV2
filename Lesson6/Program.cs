@@ -15,13 +15,15 @@ namespace Lesson6
 
             Library libraryN1 = new Library(array);
 
-            libraryN1.BookInfo(1);
+            libraryN1.BookInfo(0);
+
+            Console.WriteLine("Введите название книги(С учетом регистра):");
 
             string bookfound = Console.ReadLine();
 
             libraryN1.FoundABook(bookfound);
 
-            libraryN1.BiggestBook();
+            libraryN1.BiggestBookFounder();
         }
     }
 }
