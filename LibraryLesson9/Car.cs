@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryLesson9
 {
-    public class Car : Transport
+    public class Car : Transport, IMovable<Transport>
     {
         private int MaxSpeed { get; set; }
 

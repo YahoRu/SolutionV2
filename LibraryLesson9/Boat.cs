@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryLesson9
 {
-    public class Boat : Transport
+    public class Boat : Transport, IMovable<Transport>
     {
         private int MaxSpeed { get; set; }
 
@@ -27,5 +27,7 @@ namespace LibraryLesson9
 
             return ($"Максимальная скорость: {MaxSpeed}, Количество лошадиных сил: {HorsePover}.");
         }
+
+
     }
 }

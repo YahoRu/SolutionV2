@@ -1,20 +1,27 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
 
 namespace LibraryLesson9
 {
-    public class MyCollection<T> where T : Transport
+    public class AnyCollection<T> : IIndexatorable, IChangable where T : Transport
     {
+
         private T[] Array;
+
         private int NumberOfElements { get; set; }
 
         public int AllElements { get => NumberOfElements; }
 
-        public MyCollection()
+        public AnyCollection()
         {
-             this.Array = new T[10];
+            this.Array = new T[10];
         }
 
-        public void AddInCollection(T item)
+        public void AddInCollection(T item) 
         {
             if (Array.Length <= NumberOfElements)
             {
@@ -35,4 +42,6 @@ namespace LibraryLesson9
 
 
     }
+
 }
+
