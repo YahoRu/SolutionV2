@@ -8,7 +8,6 @@ namespace Lesson10
     {
         static void Main(string[] args)
         {
-
             var list1 = new MyItem();
             var list2 = new MyItem();
 

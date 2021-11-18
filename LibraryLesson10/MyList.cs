@@ -63,5 +63,6 @@ namespace LibraryLesson10
         {
             return ((IEnumerable)newList).GetEnumerator();
         }
+
     }
 }
