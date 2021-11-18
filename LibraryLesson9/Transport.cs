@@ -9,7 +9,6 @@ namespace LibraryLesson9
     public class Transport
     {
         private int MaxSpeed { get; set; }  
-
         private int HorsePover { get; set; }
 
         public Transport(int maxSpeed, int horsePover)
@@ -22,6 +21,5 @@ namespace LibraryLesson9
         {
             Console.WriteLine("Start Moving");
         }
-
     }
 }

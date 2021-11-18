@@ -9,8 +9,8 @@ namespace LibraryLesson9
     public class Car : Transport, IMovable<Transport>
     {
         private int MaxSpeed { get; set; }
-
         private int HorsePover { get; set; }
+
         public Car(int maxSpeed, int horsePover) : base(maxSpeed, horsePover)
         {
             MaxSpeed = maxSpeed;
@@ -24,8 +24,14 @@ namespace LibraryLesson9
 
         public override string ToString()
         {
-
-            return ($"Максимальная скорость: {MaxSpeed}, Количество лошадиных сил: {HorsePover}.");
+            try
+            {
+                return ($"Это машина. Максимальная скорость: {MaxSpeed}, Количество лошадиных сил: {HorsePover}.");
+            }
+            catch
+            {
+                return ($"Не найдено!");
+            }
         }
     }
 }

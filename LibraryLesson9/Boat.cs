@@ -9,8 +9,8 @@ namespace LibraryLesson9
     public class Boat : Transport, IMovable<Transport>
     {
         private int MaxSpeed { get; set; }
-
         private int HorsePover { get; set; }
+
         public Boat(int maxSpeed, int horsePover) : base(maxSpeed, horsePover)
         {
             MaxSpeed = maxSpeed;
@@ -27,7 +27,5 @@ namespace LibraryLesson9
 
             return ($"Максимальная скорость: {MaxSpeed}, Количество лошадиных сил: {HorsePover}.");
         }
-
-
     }
 }

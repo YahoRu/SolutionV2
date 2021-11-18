@@ -1,17 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
 
 namespace LibraryLesson9
 {
-    public class MyCollection<T> where T : Transport
+    public class MyCollection<T> : IIndexatorable, IChangable where T : Transport
     {
+
         private T[] Array;
         private int NumberOfElements { get; set; }
-
         public int AllElements { get => NumberOfElements; }
 
         public MyCollection()
         {
-             this.Array = new T[10];
+            this.Array = new T[10];
         }
 
         public void AddInCollection(T item)
@@ -30,9 +35,15 @@ namespace LibraryLesson9
 
         public void Indexator(int index)
         {
-            Console.WriteLine(Array[index].ToString());
+            if (index < NumberOfElements)
+            {
+                Console.WriteLine(Array[index].ToString());
+            }
+            else
+            {
+                Console.WriteLine("Элемента с таким индексом не найдено!");
+            }
         }
-
-
     }
 }
+
