@@ -10,7 +10,6 @@ namespace Lesson12
     {
         public NullShopExeption(string message) : base(message)
         {
-            message = $"магазина с названием {message} не существует";
         }
 
     }

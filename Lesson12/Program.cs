@@ -8,9 +8,9 @@ namespace Lesson12
         static void Main(string[] args)
         {
             Product milk = new Product { ProductName = "Молоко", ShopName = "Пятерочка" };
-            Product water = new Product { ProductName = "Вода", ShopName = "Пятерочка" };
+            Product water = new Product { ProductName = "Вода", ShopName = "Соседи" };
             Product beer = new Product { ProductName = "Пиво", ShopName = "Светофор" };
-            Product cheeze = new Product { ProductName = "Сыр", ShopName = "Пятерочка" };
+            Product cheeze = new Product { ProductName = "Сыр", ShopName = "Виталюр" };
             Product chips = new Product { ProductName = "Чипсы", ShopName = "Пятерочка" };
 
             Product[] prod = new Product[5] { milk, water, beer, cheeze, chips };
@@ -18,7 +18,9 @@ namespace Lesson12
             Array.Sort(prod);
 
             string x = Console.ReadLine();
+
             int count = 0;
+
             foreach (var item in prod)
             {
                 if (item.ShopName == x)
@@ -31,12 +33,12 @@ namespace Lesson12
             {
                 if (count == 0)
                 {
-                    throw new NullShopExeption("Таких магазинов нет!");
+                    throw new NullShopExeption("не существует!");
                 }
             }
             catch (NullShopExeption e)
             {
-                Console.WriteLine($"магазина с названием {x} не существует");
+                Console.WriteLine($"магазина с названием {x} {e.Message}");
             }
         }
     }
