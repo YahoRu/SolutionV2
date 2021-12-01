@@ -17,29 +17,10 @@ namespace Lesson12
 
             Array.Sort(prod);
 
+            Console.WriteLine("Введите название магазина с учетом регистра:");
             string x = Console.ReadLine();
 
-            int count = 0;
-
-            foreach (var item in prod)
-            {
-                if (item.ShopName == x)
-                {
-                    count++;
-                    Console.WriteLine(item.ToString());
-                }
-            }
-            try
-            {
-                if (count == 0)
-                {
-                    throw new NullShopExeption("не существует!");
-                }
-            }
-            catch (NullShopExeption e)
-            {
-                Console.WriteLine($"магазина с названием {x} {e.Message}");
-            }
+            Product.CheckShop(prod, x);
         }
     }
 }

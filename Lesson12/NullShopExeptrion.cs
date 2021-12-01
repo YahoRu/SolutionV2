@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Lesson12
 {
-    public class NullShopExeption : Exception
+    public class NullShopException : Exception
     {
-        public NullShopExeption(string message) : base(message)
+        public NullShopException(string message) : base(message)
         {
         }
 
