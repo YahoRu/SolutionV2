@@ -8,6 +8,10 @@ namespace Lesson12
 {
     public class NullShopException : Exception
     {
+        public NullShopException()
+        {
+        }
+
         public NullShopException(string message) : base(message)
         {
         }
