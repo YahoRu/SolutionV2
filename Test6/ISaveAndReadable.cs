@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Test6
 {
-    public interface ISaveAndReadable<T>
+    public interface ISaveAndReadable<T> where T : Client
     {
         void Save();
         void Read();
